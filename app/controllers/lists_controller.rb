@@ -14,6 +14,7 @@ class ListsController < ApplicationController
   # GET /lists/1.xml
   def show
     @list = List.find(params[:id])
+    @todos = @list.todos
 
     respond_to do |format|
       format.html # show.html.erb

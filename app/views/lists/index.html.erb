@@ -16,9 +16,10 @@
     <td><%= list.description %></td>
 	<td>
 		<ul>
-		<% list.todos.limit(3).each do |todo| %>
+		<% few_todos(list).each do |todo| %>
 			<li><%= todo.task %></li>
 		<% end %>
+			<li>...</li>
 		</ul>
 	</td>
 
