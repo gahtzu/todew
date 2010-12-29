@@ -19,7 +19,9 @@
 		<% few_todos(list).each do |todo| %>
 			<li><%= todo.task %></li>
 		<% end %>
+		<% if list.todos.count != 0 %>
 			<li>...</li>
+		<% end %>
 		</ul>
 	</td>
 
